@@ -46,13 +46,13 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public void nextVolume() {
+    public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
     }
 
-    public void prevVolume() {
+    public void turnDownVolume() {
         if (currentVolume != 0) {
             currentVolume--;
         }

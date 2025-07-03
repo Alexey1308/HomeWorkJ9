@@ -261,11 +261,11 @@ public class RadioTest {
     }
 
     @Test
-    public void nextVolumeTest() {
+    public void increaseVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(55);
 
-        radio.nextVolume();
+        radio.increaseVolume();
 
         int expected = 56;
         int actual = radio.getCurrentVolume();
@@ -273,10 +273,10 @@ public class RadioTest {
     }
 
     @Test
-    public void zeroNextVolumeTest() {
+    public void zeroIncreaseVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
-        radio.nextVolume();
+        radio.increaseVolume();
 
         int expected = 1;
         int actual = radio.getCurrentVolume();
@@ -284,10 +284,10 @@ public class RadioTest {
     }
 
     @Test
-    public void firstNextVolumeTest() {
+    public void firstIncreaseVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(1);
-        radio.nextVolume();
+        radio.increaseVolume();
 
         int expected = 2;
         int actual = radio.getCurrentVolume();
@@ -295,10 +295,10 @@ public class RadioTest {
     }
 
     @Test
-    public void ninetyNineNextVolumeTest() {
+    public void ninetyNineIncreaseVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(99);
-        radio.nextVolume();
+        radio.increaseVolume();
 
         int expected = 100;
         int actual = radio.getCurrentVolume();
@@ -306,10 +306,10 @@ public class RadioTest {
     }
 
     @Test
-    public void maxNextVolumeTest() {
+    public void maxIncreaseVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
-        radio.nextVolume();
+        radio.increaseVolume();
 
         int expected = 100;
         int actual = radio.getCurrentVolume();
@@ -317,10 +317,10 @@ public class RadioTest {
     }
 
     @Test
-    public void prevVolumeTest() {
+    public void turnDownVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(33);
-        radio.prevVolume();
+        radio.turnDownVolume();
 
         int expected = 32;
         int actual = radio.getCurrentVolume();
@@ -328,10 +328,10 @@ public class RadioTest {
     }
 
     @Test
-    public void prevFirstVolumeTest() {
+    public void turnDownFirstVolumeTest() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
-        radio.prevVolume();
+        radio.turnDownVolume();
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
